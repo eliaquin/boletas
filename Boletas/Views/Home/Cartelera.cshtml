@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "PeliculaViewModel";
+}
+<h2>Cartelera</h2>
+<hr />
+
+<div id="app">
+    <div class="row">
+        <div class="col-sm-8">
+            <label>Nombre Película</label>
+            <input v-model="cartelera.nombre" type="text" class="form-control" />
+        </div>
+        <div class="col-sm-4">
+            <label>Horario</label>
+            <input v-model="cartelera.horario" type="text" class="form-control" />
+        </div>
+        <div class="col-sm">
+            <label>Precio</label>
+            <input v-model.number="cartelera.precio" type="number" class="form-control" />
+        </div>
+        <div class="col-sm">
+            <label>Fecha Inicial</label>
+            <input v-model="cartelera.fechaInicio" type="date" class="form-control" />
+        </div>
+        <div class="col-sm">
+            <label>Fecha Final</label>
+            <input v-model="cartelera.fechaFin" type="date" class="form-control" />
+        </div>
+    </div>
+    <div class="row espacio20arriba alinear-derecha">
+        <div class="col-sm-12">
+            <button v-on:click="guardar()" class="btn btn-primary">Guardar</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm">
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Película</th>
+                        <th scope="col">Horario</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Inicio</th>
+                        <th scope="col">Fin</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="~/ScriptsVue/cartelera.js"></script>
+

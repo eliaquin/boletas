@@ -27,5 +27,10 @@ namespace Boletas.Controllers
 
             return View();
         }
+
+        public ActionResult Cartelera()
+        {
+            return View();
+        }
     }
 }

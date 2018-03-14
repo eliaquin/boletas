@@ -1,27 +1,22 @@
-﻿using Boletas.DAL.Models;
+﻿using Boletas.BOL.ViewModels;
+using Boletas.DAL.Models;
 
 namespace Boletas.BOL.Core
 {
     public class Peliculas : Repository<Pelicula>
     {
-
-    }
-
-    public class MiClase
-    {
-        public void MiMetodo()
+        public bool InsertarPelicula(PeliculaViewModel pelicula)
         {
-            var peliculas = new Peliculas();
-            peliculas.Add(new Pelicula
+            var p = new Pelicula
             {
-                Nombre = "Duro de Programar",
-                HorarioCartelera = "5:00 PM, 7:00 PM, 10:00 PM",
-                Precio = 250.00m
-            });
-            peliculas.Context.SaveChanges();
-
-
-
+                Nombre = pelicula.Nombre,
+                HorarioCartelera = pelicula.Horario,
+                Precio = pelicula.Precio,
+                InicioCartelera = pelicula.FechaInicio,
+                FinCartelera = pelicula.FechaFin
+            };
+            Add(p);
+            return Context.SaveChanges() > 0;
         }
     }
 }

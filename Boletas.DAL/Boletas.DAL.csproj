@@ -59,6 +59,10 @@
     <Compile Include="Migrations\201803141921508_limpieza.Designer.cs">
       <DependentUpon>201803141921508_limpieza.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803141935550_fechaagregada.cs" />
+    <Compile Include="Migrations\201803141935550_fechaagregada.Designer.cs">
+      <DependentUpon>201803141935550_fechaagregada.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Pelicula.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,6 +77,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803141921508_limpieza.resx">
       <DependentUpon>201803141921508_limpieza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803141935550_fechaagregada.resx">
+      <DependentUpon>201803141935550_fechaagregada.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

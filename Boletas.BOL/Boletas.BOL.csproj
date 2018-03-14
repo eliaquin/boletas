@@ -50,6 +50,7 @@
     <Compile Include="Core\Peliculas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository.cs" />
+    <Compile Include="ViewModels\PeliculaViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Boletas.DAL\Boletas.DAL.csproj">
