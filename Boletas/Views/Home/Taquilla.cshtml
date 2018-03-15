@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Taquilla";
+}
+
+<h2>Taquilla</h2>
+<div id="app">
+    <div class="row">
+        <div class="col-sm-6">
+            <label>Pelicula</label>
+            <select class="form-control" v-model="peliculaSeleccionada">
+                <option v-bind:value="p.Id" v-for="p in peliculas" v-text="p.Nombre"></option>
+            </select>
+        </div>
+        <div class="col-sm-6">
+            <label>Tanda</label>
+            <select class="form-control">
+                <option value="value" v-for="t in tandas" v-text="t"></option>
+            </select>
+        </div>
+    </div>
+</div>
+<script src="~/ScriptsVue/taquilla.js"></script>

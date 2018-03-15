@@ -32,5 +32,10 @@ namespace Boletas.Controllers
         {
             return View();
         }
+
+        public ActionResult Taquilla()
+        {
+            return View();
+        }
     }
 }
