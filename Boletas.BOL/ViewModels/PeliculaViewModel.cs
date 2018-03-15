@@ -8,6 +8,7 @@ namespace Boletas.BOL.ViewModels
 {
     public class PeliculaViewModel
     {
+        public int Id { get; set; }
         public string Nombre { get; set; }
         public string Horario { get; set; }
         public decimal Precio { get; set; }

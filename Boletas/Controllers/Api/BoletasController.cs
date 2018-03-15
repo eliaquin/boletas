@@ -17,7 +17,15 @@ namespace Boletas.Controllers.Api
         public bool GuardarPelicula([FromBody]PeliculaViewModel pelicula)
         {
             var p = new Peliculas();
-            return p.InsertarPelicula(pelicula);
+            return p.GuardarOActualizar(pelicula);
+        }
+
+        [HttpGet]
+        [Route("buscartodo")]
+        public IEnumerable<PeliculaViewModel> BuscarTodo()
+        {
+            var p = new Peliculas();
+            return p.BuscarDisponibles();
         }
     }
 }

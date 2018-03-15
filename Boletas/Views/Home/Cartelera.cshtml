@@ -34,9 +34,9 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row espacio20arriba">
         <div class="col-sm">
-            <table>
+            <table class="table table-striped">
                 <thead>
                     <tr>
                         <th scope="col">Película</th>
@@ -46,7 +46,15 @@
                         <th scope="col">Fin</th>
                     </tr>
                 </thead>
-                <tbody></tbody>
+                <tbody>
+                    <tr v-for="p in peliculas">
+                        <td><input v-model.lazy="p.Nombre" v-on:change="guardar(p)" type="text" class="form-control"/></td>
+                        <td v-text="p.Horario"></td>
+                        <td v-text="formatearDinero(p.Precio)"></td>
+                        <td v-text="formatearFecha(p.FechaInicio)"></td>
+                        <td v-text="formatearFecha(p.FechaFin)"></td>
+                    </tr>
+                </tbody>
             </table>
         </div>
     </div>
